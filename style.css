@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fcecf3;
+    color: #333;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    align-items: stretch;
+}
+
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.apresentacao {
+    width: 36%;
+    min-height: 100vh;
+
+    background: linear-gradient(160deg,
+            #fce4ed,
+            #f9d4e3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px;
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.icone-manicure {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #df4d86;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 10px 25px rgba(180, 55, 105, 0.2);
+}
+
+
+.apresentacao h1 {
+    font-family: Georgia, serif;
+
+    font-size: 62px;
+
+    line-height: 0.95;
+
+    color: #7e2850;
+
+    margin-bottom: 20px;
+}
+
+
+.apresentacao h1 span {
+    display: block;
+
+    font-size: 42px;
+
+    color: #d94d87;
+
+    font-style: italic;
+
+    margin-top: 10px;
+}
+
+
+.linha {
+    width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 15px 0 25px;
+
+    color: #d94d87;
+}
+
+
+.linha::before,
+.linha::after {
+    content: "";
+
+    height: 2px;
+
+    background: #d94d87;
+
+    flex: 1;
+}
+
+
+.linha span {
+    margin: 0 15px;
+}
+
+
+.apresentacao p {
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    color: #7e2850;
+}
+
+
+/* Elementos decorativos */
+
+.elementos-salao {
+    position: absolute;
+
+    bottom: 35px;
+    left: 30px;
+
+    display: flex;
+    gap: 15px;
+}
+
+
+.vidrinho {
+    width: 65px;
+    height: 90px;
+
+    border-radius: 12px 12px 18px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+.vidrinho.rosa {
+    background: #f3a1bf;
+}
+
+
+.vidrinho.pink {
+    background: #dc4380;
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.agenda {
+    width: 64%;
+
+    background: #ffffff;
+
+    margin: 20px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(120, 40, 80, 0.12);
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+    background: linear-gradient(90deg,
+            #f5b5cd,
+            #f7c6d9);
+
+    padding: 25px 35px;
+}
+
+
+.cabecalho h2 {
+    color: #6f2446;
+
+    font-size: 30px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    padding: 35px;
+}
+
+
+.campo {
+    margin-bottom: 25px;
+}
+
+
+.campo label {
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+
+    color: #333;
+}
+
+
+.campo select,
+.campo input {
+    width: 100%;
+
+    height: 55px;
+
+    border: 1px solid #d9c7cf;
+
+    border-radius: 10px;
+
+    padding: 0 18px;
+
+    font-size: 16px;
+
+    background: #ffffff;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.campo select:focus,
+.campo input:focus {
+    border-color: #dc4c86;
+
+    box-shadow: 0 0 0 3px rgba(220, 76, 134, 0.1);
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btn-continuar {
+    background: linear-gradient(135deg,
+            #df4d86,
+            #c93670);
+
+    border: none;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 5px;
+}
+
+
+.btn-continuar:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(201, 54, 112, 0.25);
+}
+
+
+/* =========================
+   CONFIRMAÇÃO
+========================= */
+
+#confirmacao {
+    margin: 0 35px 30px;
+
+    padding: 20px;
+
+    border: 2px solid #e8a0bf;
+
+    border-radius: 15px;
+
+    background-color: #fff5f9;
+
+    color: #5e2941;
+}
+
+
+#confirmacao:empty {
+    display: none;
+}
+
+
+#confirmacao h2 {
+    color: #d43f78;
+
+    margin-bottom: 15px;
+}
+
+
+#confirmacao p {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   AGENDAMENTOS
+========================= */
+
+.agendamentos {
+    border-top: 1px solid #eadde3;
+
+    margin: 0 35px;
+
+    padding: 25px 0 35px;
+}
+
+
+.agendamentos h2 {
+    color: #6f2446;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+
+#listaAgendamentos {
+    background: #fff9fb;
+
+    border: 1px solid #efdce5;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+
+#listaAgendamentos:empty {
+    display: none;
+}
+
+
+#listaAgendamentos>div {
+    background: white;
+
+    border-left: 4px solid #df4d86;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+#listaAgendamentos>div:last-child {
+    margin-bottom: 0;
+}
+
+
+#listaAgendamentos p {
+    margin-bottom: 8px;
+}
+
+
+#listaAgendamentos hr {
+    display: none;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .pagina {
+        flex-direction: column;
+    }
+
+    .apresentacao {
+        width: 100%;
+        min-height: 420px;
+    }
+
+    .agenda {
+        width: auto;
+        margin: 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .apresentacao {
+        min-height: 380px;
+
+        padding: 30px 20px;
+    }
+
+    .apresentacao h1 {
+        font-size: 48px;
+    }
+
+    .apresentacao h1 span {
+        font-size: 34px;
+    }
+
+    .apresentacao p {
+        font-size: 17px;
+    }
+
+    .agenda {
+        margin: 10px;
+
+        border-radius: 15px;
+    }
+
+    .cabecalho {
+        padding: 20px;
+    }
+
+    .cabecalho h2 {
+        font-size: 23px;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .agendamentos {
+        margin: 0 20px;
+    }
+
+    #confirmacao {
+        margin: 0 20px 25px;
+    }
+
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda do Salão</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <!-- LADO ESQUERDO -->
+        <section class="apresentacao">
+
+            <div class="icone-manicure">
+                💅
+            </div>
+
+            <h1>
+                Agenda
+                <span>do Salão</span>
+            </h1>
+
+            <div class="linha">
+                <span>♥</span>
+            </div>
+
+            <p>
+                Agende seu horário
+                <br>
+                de forma rápida e prática
+            </p>
+
+            <div class="elementos-salao">
+                <div class="vidrinho rosa">💅</div>
+                <div class="vidrinho pink">💅</div>
+            </div>
+
+        </section>
+
+
+        <!-- LADO DIREITO -->
+        <section class="agenda">
+
+            <div class="cabecalho">
+                <h2>💅 Agenda do Salão</h2>
+            </div>
+
+
+            <div class="formulario">
+
+                <!-- SERVIÇO -->
+                <div class="campo">
+
+                    <label for="servico">
+                        Escolha o serviço:
+                    </label>
+
+                    <select id="servico">
+
+                        <option value="">
+                            Selecione um serviço
+                        </option>
+
+                        <option value="Manicure">
+                            Manicure
+                        </option>
+
+                        <option value="Pedicure">
+                            Pedicure
+                        </option>
+
+                        <option value="Alongamento de unhas">
+                            Alongamento de unhas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PROFISSIONAL -->
+                <div class="campo">
+
+                    <label for="profissional">
+                        Escolha a profissional:
+                    </label>
+
+                    <select id="profissional" onchange="atualizarHorarios()">
+
+                        <option value="">
+                            Selecione uma profissional
+                        </option>
+
+                        <option value="Ana">
+                            Ana
+                        </option>
+
+                        <option value="Beatriz">
+                            Beatriz
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DATA -->
+                <div class="campo campo-data">
+
+                    <label for="data">
+                        Escolha a data:
+                    </label>
+
+                    <input type="date" id="data" onchange="atualizarHorarios()">
+
+                </div>
+
+
+                <!-- HORÁRIO -->
+                <div class="campo">
+
+                    <label for="horario">
+                        Escolha o horário:
+                    </label>
+
+                    <select id="horario">
+
+                        <option value="">
+                            Selecione um horário
+                        </option>
+
+                        <option value="09:00">
+                            09:00
+                        </option>
+
+                        <option value="10:00">
+                            10:00
+                        </option>
+
+                        <option value="11:00">
+                            11:00
+                        </option>
+
+                        <option value="14:00">
+                            14:00
+                        </option>
+
+                        <option value="15:00">
+                            15:00
+                        </option>
+
+                        <option value="16:00">
+                            16:00
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="btn-continuar" onclick="continuar()">
+
+                    Continuar
+
+                </button>
+
+            </div>
+
+
+            <!-- CONFIRMAÇÃO -->
+            <div id="confirmacao"></div>
+
+
+            <!-- AGENDAMENTOS -->
+            <section class="agendamentos">
+
+                <h2>
+                    📋 Agendamentos realizados
+                </h2>
+
+                <div id="listaAgendamentos"></div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <script src="agenda.js"></script>
+
+</body>
+
+</html>
